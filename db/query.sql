@@ -5,6 +5,19 @@ VALUES (1, 'IT'),
        (4, 'Finance'),
        (5, 'Marketing');
 
+--- Department Table ---
+
+------ | id | name     |
+------ |----|----------|
+------ | 1  | IT       |
+------ | 2  | Sales    |
+------ | 3  | HR       |
+------ | 4  | Finance  |
+------ | 5  | Marketing|
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Sample roles for each department
 INSERT INTO role (id, title, salary, department_id)
 VALUES (1, 'Software Engineer', 80000, 1),          -- IT Department
@@ -12,6 +25,19 @@ VALUES (1, 'Software Engineer', 80000, 1),          -- IT Department
        (3, 'HR Manager', 70000, 3),                -- HR Department
        (4, 'Financial Analyst', 75000, 4),         -- Finance Department
        (5, 'Marketing Specialist', 65000, 5);     -- Marketing Department
+
+------------------------ Role Table ------------------------
+
+------ | id | title               | salary | department_id |
+------ |----|---------------------|--------|---------------|
+------ | 1  | Software Engineer   | 80000  | 1             |
+------ | 2  | Sales Representative| 60000  | 2             |
+------ | 3  | HR Manager          | 70000  | 3             |
+------ | 4  | Financial Analyst   | 75000  | 4             |
+------ | 5  | Marketing Specialist| 65000  | 5             |
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Sample employees
 INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
@@ -24,3 +50,17 @@ VALUES (1, 'Ben', 'Char', 1, NULL),   -- Ben Char, Software Engineer, No Manager
        (7, 'Sarah', 'Brown', 4, NULL),      -- Sarah Brown, Financial Analyst, No Manager
        (8, 'Olivia', 'Martinez', 5, NULL),  -- Olivia Martinez, Marketing Specialist, No Manager
        (9, 'James', 'Taylor', 1, 1);        -- James Taylor, Software Engineer, Managed by Ben Char
+
+---------------------- Employee Table ----------------------
+
+------ | id | first_name | last_name | role_id | manager_id |
+------ |----|------------|-----------|---------|------------|
+------ | 1  | Ben        | Char      | 1       | NULL       |
+------ | 2  | Jane       | Smith     | 2       | 1          |
+------ | 3  | Alice      | Johnson   | 3       | NULL       |
+------ | 4  | Michael    | Johnson   | 1       | NULL       |
+------ | 5  | Emily      | Davis     | 2       | 1          |
+------ | 6  | William    | Wilson    | 3       | NULL       |
+------ | 7  | Sarah      | Brown     | 4       | NULL       |
+------ | 8  | Olivia     | Martinez  | 5       | NULL       |
+------ | 9  | James      | Taylor    | 1       | 1          |
